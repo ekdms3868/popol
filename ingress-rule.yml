@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-portal
+  annotations: 
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: www.popol.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: svc-main
+            port: 
+              number: 80
+      - pathType: Prefix
+        path: "/green"
+        backend:
+          service:
+            name: svc-green
+            port: 
+              number: 80
