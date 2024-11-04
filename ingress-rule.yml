@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-portal
+  name: ingress-fruits
   annotations: 
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -11,16 +11,16 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: svc-main
-            port: 
-              number: 80
-      - pathType: Prefix
-        path: "/green"
+        path: /green(/|$)
         backend:
           service:
             name: svc-green
+            port: 
+              number: 80
+      - pathType: Prefix
+        path: /($)
+        backend:
+          service:
+            name: svc-main
             port: 
               number: 80
