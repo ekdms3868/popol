@@ -8,7 +8,7 @@ pipeline {
         ANSIBLE_PRIVATE_KEY_FILE = '/var/lib/jenkins/.ssh/ansible_key'
       }
       steps {
-        sh 'ansible-playbook -i /root/lab1/hosts /var/lib/jenkins/workspace/popol/playbook.yml'
+        sh 'ansible-playbook -i /etc/ansible/hosts /var/lib/jenkins/workspace/popol/playbook.yml'
       }
     }
   }
