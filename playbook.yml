@@ -22,7 +22,7 @@
    #  command: sudo docker login https://211.183.3.105 -u admin -p Harbor12345
 
     - name: Build Docker image
-      command: docker build -t ekdms3868/popol:main .
+      command: docker build -t ekdms3868/popol:Jenkins .
       # 하버 구축 완료하면 빌드 방법을 밑처럼 바꾸어주기 (하버용 이미지 빌드)
       #command: docker build -t subject:harbor .
       args:
@@ -33,7 +33,7 @@
    #  command: docker tag subject:harbor 211.183.3.105/subject_harbor/subject:harbor 
 
     - name: Push Docker image to Docker Hub
-      command: docker push ekdms3868/popol:main
+      command: docker push ekdms3868/popol:Jenkins
       #하버 구축 완료하면 push code를 밑으로 바꾸기 (하버에 푸시)
       #command: docker push 211.183.3.105/subject_harbor/subject:harbor 
 
