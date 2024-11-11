@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: main
-        image: ekdms3868/popol:main
+        image: ekdms3868/popol:Jenkins
         resources:
           requests:
             memory: "64Mi"
