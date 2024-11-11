@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: ekdms3868/popol:main
+        image: ekdms3868/popol:Jenkins
         #하버 구축 완료하면 이미지 가져오는걸 밑처럼 바꾸어주기
         #image: 211.183.3.105/subject_harbor/subject:harbor # Harbor에서 사용할 이미지 경로
         ports:
